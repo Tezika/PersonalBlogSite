@@ -1,0 +1,31 @@
+<% include partials/header%>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Blog</div>
+    <form id="form_blog" class="ui form" action ="/blogs", method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" placeholder="The title of the blog"></input>     
+        </div>
+       <div class="field">
+            <label>Image</label>
+            <input type="text" name="blog[image]" placeholder="The url of the blog image"></input>   
+       </div>
+        <div class="field">
+            <label>Content</label>
+            <textarea name="blog[body]" placeholder="Write some content there..."></textarea>  
+            <div class="align-right">
+                <div id="btn_submit" class="ui inverted green button">
+                    <i class="paper plane outline icon"></i>
+                    Submit
+                </div>  
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $('#btn_submit').click(function(){
+        $('#form_blog').submit();
+    });
+</script>
+<% include partials/footer%>

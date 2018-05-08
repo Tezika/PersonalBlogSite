@@ -1,0 +1,31 @@
+<script>
+    $('.ui.form')
+    .form({
+        inline: true,
+        fields:
+        {
+            title:
+            {
+                identifier: 'blog[title]',
+                rules:
+                [
+                    {
+                        type: 'empty',
+                        prompt: 'Please enter the title'
+                    }
+                ]
+            },
+            content:
+            {
+                identifier: 'blog[body]',
+                rules:
+                [
+                    {
+                        type: 'empty',
+                        prompt: 'There cannot be empty, write something somehow :)'
+                    }
+                ]
+            }
+        }
+    });
+</script>

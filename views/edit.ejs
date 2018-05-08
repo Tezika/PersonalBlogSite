@@ -7,19 +7,19 @@
             <label>Title</label>
             <input type="text" name="blog[title]" value="<%= blog.title%>"></input>     
         </div>
-       <div class="field">
+        <div class="field">
             <label>Image</label>
             <input type="text" name="blog[image]" value="<%= blog.image%>"></input>   
-       </div>
+        </div>
         <div class="field">
             <label>Content</label>
             <textarea name="blog[body]"><%=blog.body%>></textarea>
-            <div class="align-right">
-                <div id="btn_submit" class="ui inverted green button">
-                    <i class="paper plane outline icon"></i>
+        </div>
+        <div class="align-right">
+            <div id="btn_submit" class="ui inverted green button">
+                <i class="paper plane outline icon"></i>
                 Submit
-                </div>  
-            </div>
+            </div>  
         </div>
     </form>
 </div>
@@ -30,4 +30,5 @@
     });
 </script>
 
+<% include partials/formchecker %>
 <% include partials/footer%>
